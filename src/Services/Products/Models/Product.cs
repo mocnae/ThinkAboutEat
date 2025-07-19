@@ -1,11 +1,10 @@
 using System;
+using BuildingBlocks.Data;
 
 namespace Products.Models;
 
-public class Product
+public class Product : BaseModel
 {
-    public Guid Id { get; set; }
-    public string Name { get; set; } = default!;
     public decimal Kalor { get; set; }
     public decimal Belk { get; set; }
     public decimal Jir { get; set; }
