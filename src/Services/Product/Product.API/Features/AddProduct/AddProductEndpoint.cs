@@ -8,7 +8,7 @@ using Products.Models;
 namespace Products.Features.AddProduct;
 
 public record AddProductRequest(string Name, decimal Kalor, decimal Belk, decimal Jir, decimal Uglev);
-public record AddProductResponse(Product product);
+public record AddProductResponse(Products.Models.Product product);
 
 public class AddProductEndpoint
     : ICarterModule
@@ -17,7 +17,7 @@ public class AddProductEndpoint
     {
         app.MapPost("/product", async (AddProductRequest request, ISender sender) =>
         {
-            var product = request.Adapt<Product>();
+            var product = request.Adapt<Products.Models.Product>();
 
             var result = await sender.Send(new AddProductCommand(product));
 

@@ -6,9 +6,9 @@ using Products.Models;
 
 namespace Products.Features.UpdateProduct;
 
-public record UpdateProductCommand(Product Product): ICommand<UpdateProductCommandResult>;
+public record UpdateProductCommand(Products.Models.Product Product): ICommand<UpdateProductCommandResult>;
 
-public record UpdateProductCommandResult(Product Product);
+public record UpdateProductCommandResult(Products.Models.Product Product);
 
 public class UpdateProductEventHandler
     (ProductRepository repository)

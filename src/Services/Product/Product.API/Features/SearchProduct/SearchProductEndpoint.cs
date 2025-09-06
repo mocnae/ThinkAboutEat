@@ -7,7 +7,7 @@ using Products.Models;
 
 namespace Products.Features.SearchProduct;
 
-public record SearchProductResponse(List<Product> Products);
+public record SearchProductResponse(List<Products.Models.Product> Products);
 
 public class SearchProductEndpoint : ICarterModule
 {

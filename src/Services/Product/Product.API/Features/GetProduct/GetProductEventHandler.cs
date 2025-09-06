@@ -6,7 +6,7 @@ using Products.Models;
 namespace Products.Features.GetProduct;
 
 public record GetProductQuery(string Name): IQuery<GetProductResult>;
-public record GetProductResult(Product Product);
+public record GetProductResult(Products.Models.Product Product);
 
 public class GetProductEventHandler
     (ProductRepository repository)

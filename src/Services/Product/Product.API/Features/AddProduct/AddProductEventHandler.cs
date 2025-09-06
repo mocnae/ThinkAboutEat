@@ -5,9 +5,9 @@ using Products.Models;
 
 namespace Products.Features.AddProduct;
 
-public record AddProductCommand(Product Product): ICommand<AddProductResult>;
+public record AddProductCommand(Products.Models.Product Product): ICommand<AddProductResult>;
 
-public record AddProductResult(Product Product);
+public record AddProductResult(Products.Models.Product Product);
 
 public class AddProductEventHandler
     (ProductRepository _repository)

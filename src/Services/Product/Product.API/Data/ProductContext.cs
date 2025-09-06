@@ -6,7 +6,7 @@ namespace Products.Data;
 
 public class ProductContext : DbContext
 {
-    public DbSet<Product> Products { get; set; }
+    public DbSet<Products.Models.Product> Products { get; set; }
 
     public ProductContext(DbContextOptions<ProductContext> options) : base(options)
     {
@@ -15,10 +15,10 @@ public class ProductContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Product>()
+        modelBuilder.Entity<Products.Models.Product>()
             .HasKey(p => new { p.Id, p.Name });
 
-        modelBuilder.Entity<Product>()
+        modelBuilder.Entity<Products.Models.Product>()
             .HasIndex(p => p.Name).IsUnique();
     }
 }

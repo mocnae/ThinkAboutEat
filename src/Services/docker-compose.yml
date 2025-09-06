@@ -4,6 +4,9 @@ services:
   productsdb:
     image: postgres
 
+  recipesdb:
+    image: postgres
+
   products.api:
     image: ${DOCKER_REGISTRY-}productsapi
     build:
@@ -12,3 +15,4 @@ services:
 
 volumes:
   postgres-products:
+  postgres-recipes:

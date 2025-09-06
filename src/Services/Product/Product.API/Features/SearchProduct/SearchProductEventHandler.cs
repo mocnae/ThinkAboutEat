@@ -7,7 +7,7 @@ namespace Products.Features.SearchProduct;
 
 public record SearchProductQuery(string name) : IQuery<SearchProductResult>;
 
-public record SearchProductResult(List<Product> Products);
+public record SearchProductResult(List<Products.Models.Product> Products);
 
 public class SearchProductEventHandler
     (ProductRepository repository)

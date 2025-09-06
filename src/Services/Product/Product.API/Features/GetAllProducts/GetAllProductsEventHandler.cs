@@ -7,7 +7,7 @@ namespace Products.Features.GetAllProducts;
 
 public record GetAllProductsQuery() : IQuery<GetAllProductsResult>;
 
-public record GetAllProductsResult(List<Product> Products);
+public record GetAllProductsResult(List<Products.Models.Product> Products);
 
 public class GetAllProductsEventHandler
     (ProductRepository repository)

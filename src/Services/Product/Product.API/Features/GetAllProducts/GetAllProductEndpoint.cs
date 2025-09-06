@@ -6,7 +6,7 @@ using Products.Models;
 
 namespace Products.Features.GetAllProducts;
 
-public record GetAllProductsResponse(List<Product> Products);
+public record GetAllProductsResponse(List<Products.Models.Product> Products);
 
 public class GetAllProductEndpoint : ICarterModule
 {
